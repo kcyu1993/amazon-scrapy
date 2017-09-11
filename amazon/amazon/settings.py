@@ -16,7 +16,7 @@ NEWSPIDER_MODULE = 'amazon.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36'
+USER_AGENT = 'AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/12603.3.8'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False
@@ -27,7 +27,8 @@ CONCURRENT_REQUESTS = 32
 # Configure a delay for requests for the same website (default: 0)
 # See http://scrapy.readthedocs.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
-#DOWNLOAD_DELAY = 3
+DOWNLOAD_DELAY = 3
+
 # The download delay setting will honor only one of:
 #CONCURRENT_REQUESTS_PER_DOMAIN = 16
 #CONCURRENT_REQUESTS_PER_IP = 16
@@ -97,10 +98,10 @@ ITEM_PIPELINES = {
 #LOG_LEVEL = 'ERROR'
 #mysql
 MYSQL_HOST = '127.0.0.1'
-MYSQL_USER = 'dev'
-MYSQL_PASSWORD = '123456'
+MYSQL_USER = 'root'
+MYSQL_PASSWORD = '6sWA9773'
 MYSQL_PORT = 3306
-MYSQL_DB = 'pricejot_test'
+MYSQL_DB = 'amazon_best_seller'
 MYSQL_CHARSET = 'utf8mb4'
 
 MYSQL = {

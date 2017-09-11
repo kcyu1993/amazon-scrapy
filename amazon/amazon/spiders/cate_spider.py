@@ -2,6 +2,7 @@ import scrapy
 from amazon.items import CateItem
 from amazon.mysqlpipelines.sql import Sql
 
+
 class CateSpider(scrapy.Spider):
     name = "cate"
     custom_settings = {
@@ -27,7 +28,7 @@ class CateSpider(scrapy.Spider):
         elif response.meta['level'] == 2:
             list = response.css('#zg_browseRoot ul')[0].css('ul')[0].css('li a')
         else:
-            return 0
+            raise ValueError("Not suported")
         item = CateItem()
         leve_cur = response.meta['level']
         response.meta['level'] = response.meta['level'] + 1

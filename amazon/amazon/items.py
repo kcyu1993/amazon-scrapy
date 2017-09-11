@@ -8,7 +8,6 @@
 import scrapy
 
 
-
 class CateItem(scrapy.Item):
     title = scrapy.Field()
     link = scrapy.Field()
@@ -16,11 +15,13 @@ class CateItem(scrapy.Item):
     pid = scrapy.Field()
     pass
 
+
 class AsinBestItem(scrapy.Item):
     asin = scrapy.Field()
     cid = scrapy.Field()
     rank = scrapy.Field()
     pass
+
 
 class DetailItem(scrapy.Item):
     asin = scrapy.Field()
@@ -31,6 +32,7 @@ class DetailItem(scrapy.Item):
     seller_price = scrapy.Field()
     amazon_price = scrapy.Field()
     pass
+
 
 class ReviewProfileItem(scrapy.Item):
     asin = scrapy.Field()

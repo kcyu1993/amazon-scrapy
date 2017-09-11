@@ -5,6 +5,8 @@ import pydispatch
 from scrapy import signals
 from datetime import datetime
 from amazon.mysqlpipelines.pipelines import Sql
+
+
 class AsinSpider(scrapy.Spider):
     name = "asin"
     custom_settings = {

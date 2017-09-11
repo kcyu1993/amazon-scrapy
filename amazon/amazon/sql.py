@@ -22,7 +22,6 @@ class ReviewSql(object):
     conn = conn_db()
     cursor = cursor_db(conn)
 
-
     @classmethod
     def insert_profile_item(cls, item):
         sql = "INSERT INTO `py_review_profile`" \

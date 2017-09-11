@@ -8,7 +8,6 @@ from scrapy import signals
 from datetime import datetime
 
 
-
 class DetailSpider(scrapy.Spider):
     name = "detail"
     custom_settings = {
@@ -69,9 +68,6 @@ class DetailSpider(scrapy.Spider):
         print('done')
         print(self.log)
 
-
-
-
     def fetch_detail_from_listing_page(self, response):
         item = DetailItem()
         item['asin'] = response.meta['asin']
@@ -105,7 +101,6 @@ class DetailSpider(scrapy.Spider):
         return item
 
     def fetch_detail_from_review_page(self, response):
-
 
         info = response.css('#cm_cr-product_info')[0].extract()
         item = DetailItem()

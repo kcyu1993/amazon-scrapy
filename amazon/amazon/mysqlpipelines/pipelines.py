@@ -7,7 +7,9 @@ from amazon.items import CateItem, ReviewProfileItem, ReviewDetailItem, SalesRan
 from amazon.items import AsinBestItem
 from amazon.items import DetailItem
 
+
 class AmazonPipeline(object):
+
     def process_item(self,item,spider):
         if isinstance(item,CateItem):
             Sql.insert_cate_log(item)
